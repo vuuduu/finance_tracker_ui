@@ -1,0 +1,16 @@
+{
+  "expenses": [
+    {
+      "month": "1",
+      "year": "2024",
+      "amount": "0",
+      "memo": "First job"
+    },
+    {
+      "month": "2",
+      "year": "2052",
+      "amount": "0",
+      "memo": "New Job"
+    }
+  ]
+}

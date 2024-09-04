@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- ADD MONTH POPUP -->
+    <section class="add-month-popup">
+      <form action="/add-expense" method="post" class="bglg border">
+        <button type="button" class="exit-button" aria-label="Close">X</button>
+        <h2>Add Monthly Expenses</h2>
+        <div class="question-input-container border lg">
+          <label for="add-month">Month: </label>
+          <input
+            id="add-month"
+            type="number"
+            min="1"
+            max="12"
+            placeholder="e.g., 8"
+            required
+          />
+        </div>
+        <div class="question-input-container border lg">
+          <label for="add-year">Year: </label>
+          <input
+            id="add-year"
+            type="number"
+            min="1900"
+            max="2100"
+            placeholder="e.g., 2024"
+            required
+          />
+        </div>
+        <div class="question-input-container border lg">
+          <label for="add-memo">Memo: </label>
+          <input
+            id="add-memo"
+            type="text"
+            placeholder="Add a note (optional)"
+          />
+        </div>
+        <button type="button" class="cancel-btn" aria-label="Cancel">
+          Cancel
+        </button>
+        <button type="button" class="submit-btn">Submit</button>
+      </form>
+    </section>
+    <!-- EDIT MONTH POPUP -->
+    <section class="edit-month-popup">
+      <form action="/edit-expense" method="post" class="bglg border">
+        <button type="button" class="exit-button" aria-label="Close">X</button>
+        <h2>Edit Monthly Expense</h2>
+        <div class="question-input-container border lg">
+          <label for="edit-month">Month: </label>
+          <input
+            id="edit-month"
+            type="number"
+            min="1"
+            max="12"
+            placeholder="e.g., 8"
+            required
+          />
+        </div>
+        <div class="question-input-container border lg">
+          <label for="edit-year">Year: </label>
+          <input
+            id="edit-year"
+            type="number"
+            min="1900"
+            max="2100"
+            placeholder="e.g., 2024"
+            required
+          />
+        </div>
+        <div class="question-input-container border lg">
+          <label for="edit-memo">Memo: </label>
+          <input
+            id="edit-memo"
+            type="text"
+            placeholder="Add a note (optional)"
+          />
+        </div>
+        <div class="question-input-container border lg">
+          <label for="edit-delete">Delete?:</label>
+          <div class="edit-delete">
+            <label for="edit-delete-no">
+              <input
+                type="radio"
+                name="edit-delete"
+                id="edit-delete-no"
+                value="false"
+                checked
+              />
+              No
+            </label>
+            <label for="edit-delete-yes">
+              <input
+                type="radio"
+                name="edit-delete"
+                id="edit-delete-yes"
+                value="true"
+              />
+              Yes
+            </label>
+          </div>
+        </div>
+        <button type="button" class="cancel-btn" aria-label="Cancel">
+          Cancel
+        </button>
+        <button type="button" class="submit-btn">Save</button>
+      </form>
+    </section>
+    <!-- HEADER OF PAGE -->
+    <header class="header">
+      <h1 class="header-text">Expense Tracker</h1>
+    </header>
+    <!-- MAIN CONTENT -->
+    <main class="home-main-section">
+      <button class="add-monthly-expense-btn">Add Monthly Expenses</button>
+      <div class="display-expense-periods border bglg">
+        <ul class="expense-period-container">
+          <!-- 
+          <li class="expense-period border lg">
+            <span class="expense-period-month">Month</span>
+            <span class="expense-period-year">Year</span>
+            <span class="expense-period-amount">Amount</span>
+            <span class="expense-period-memo">Memo</span>
+            <button class="edit-btn">Edit</button>
+          </li>
+          -->
+        </ul>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

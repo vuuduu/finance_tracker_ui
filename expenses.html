@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <section class="add-transaction-popup">
+      <form class="bglg border">
+        <button type="button" class="exit-button" aria-label="Close">X</button>
+        <h2>Add Transaction</h2>
+        <div class="question-input-container border lg">
+          <label for="add-date">Date: </label>
+          <input
+            id="add-date"
+            type="number"
+            min="1"
+            max="31"
+            placeholder="e.g., 8"
+            required
+          />
+        </div>
+        <div class="question-input-container border lg">
+          <label for="add-amount">Amount: </label>
+          <input
+            id="add-amount"
+            type="number"
+            min="0.01"
+            placeholder="e.g., 7.86"
+            required
+          />
+        </div>
+        <div class="question-input-container border lg">
+          <label for="add-vendor">Vendor: </label>
+          <input id="add-vendor" type="text" placeholder="e.g., Name" />
+        </div>
+        <div class="question-input-container border lg">
+          <label for="add-category">Category: </label>
+          <select name="add-category" id="add-category" required>
+            <option value="1">Rent</option>
+            <option value="2">Groceries</option>
+            <option value="3">Enterntainment</option>
+            <option value="4">Takeout</option>
+            <option value="5">Bills</option>
+            <option value="6">Misc</option>
+          </select>
+        </div>
+        <div class="question-input-container border lg">
+          <label for="add-memo">Memo: </label>
+          <input id="add-memo" type="text" placeholder="e.g., Name" />
+        </div>
+        <button type="button" class="cancel-btn" aria-label="Cancel">
+          Cancel
+        </button>
+        <button type="button" class="submit-btn">Submit</button>
+      </form>
+    </section>
+    <header class="header">
+      <h1 class="header-text">
+        <span class="month">Month</span> <span class="year">Year</span>
+      </h1>
+    </header>
+    <main class="expenses-main-section">
+      <div class="left-side border bglg">
+        <div class="transaction-table">
+          <div class="transaction-table-header">
+            <h1>Transactions</h1>
+            <button class="add-transaction-btn">+</button>
+          </div>
+          <div class="descriptors">
+            <div class="expense-descriptors border lg">
+              <span class="date-descriptor">Date</span
+              ><span class="amount-descriptor">Amount</span
+              ><span class="vendor-descriptor">Vendor</span
+              ><span class="category-descriptor">Category</span
+              ><span class="memo-descriptor">Memo</span>
+            </div>
+          </div>
+          <ul class="transactions">
+            <!--
+            <li class="transaction border lg">
+              <span class="transaction-date">Date</span
+              ><span class="transaction-amount">Amount</span
+              ><span class="transaction-vendor">Vendor</span
+              ><span class="transaction-category">Category</span
+              ><span class="transaction-memo">Memo</span
+              ><button class="transaction-memo">Edit</button>
+            </li>
+            -->
+          </ul>
+        </div>
+      </div>
+      <div class="right-side">
+        <div class="right-top-side border bglg">
+          <h2>Expense Total:</h2>
+          <span class="expense-total"></span>
+        </div>
+        <div class="right-bottom-side border bglg">
+          <h2>Category Table</h2>
+          <div class="category-descriptors border lg">
+            <span>Type</span>
+            <span>Amount</span>
+          </div>
+          <ul class="category-table">
+            <!--
+            <li class="category-information border lg">
+              <span class="category-type"></span>
+              <span class="category-amount"></span>
+            </li>
+            -->
+            <li class="category-information border lg">
+              <span class="category-type">Rent</span>
+              <span class="category-amount"></span>
+            </li>
+            <li class="category-information border lg">
+              <span class="category-type">Groceries</span>
+              <span class="category-amount"></span>
+            </li>
+            <li class="category-information border lg">
+              <span class="category-type">Enterntainment</span>
+              <span class="category-amount"></span>
+            </li>
+            <li class="category-information border lg">
+              <span class="category-type">Takeout</span>
+              <span class="category-amount"></span>
+            </li>
+            <li class="category-information border lg">
+              <span class="category-type">Bills</span>
+              <span class="category-amount"></span>
+            </li>
+            <li class="category-information border lg">
+              <span class="category-type">Misc</span>
+              <span class="category-amount"></span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </main>
+    <script src="expense.js"></script>
+  </body>
+</html>
